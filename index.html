@@ -49,6 +49,10 @@
         line-height: 1.6;
         display: none;
     }
+
+    .content.active {
+        display: block;
+    }
 </style>
 </head>
 
@@ -63,7 +67,7 @@
         <div class="content" id="gear">
             laptop — lenovo legion slim 5 gen 8 16"<br>
             phone — oneplus 13r<br>
-          samsung galaxy j8<br>
+            samsung galaxy j8<br>
             redmi note 7 pro (rooted with lineage os)<br>
             poco x3<br>
             setup — no space (poor)
@@ -74,7 +78,7 @@
         <div class="label" onclick="toggle('interests')">interests</div>
         <div class="content" id="interests">
             programming — none , i vibecode<br>
-            anime- funny, detective, mystery<br>
+            anime — funny, detective, mystery<br>
             manga — psychological, detective
         </div>
     </div>
@@ -93,12 +97,7 @@
 <script>
     function toggle(id) {
         const el = document.getElementById(id);
-
-        if (el.style.display === "block") {
-            el.style.display = "none";
-        } else {
-            el.style.display = "block";
-        }
+        el.classList.toggle("active");
     }
 </script>
 
