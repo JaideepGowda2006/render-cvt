@@ -1,9 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+
+<style>
+    body {
+        background: #fff;
+        color: #000;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        margin: 0;
+        padding: 60px 20px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 42px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    .row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .label {
+        width: 150px;
+        font-size: 18px;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s;
+    }
+
+    .label:hover {
+        border-bottom: 1px solid black;
+    }
+
+    .content {
+        flex: 1;
+        font-size: 16px;
+        line-height: 1.6;
+        display: none;
+    }
+</style>
 </head>
+
 <body>
-  <h1>Hello from Render linux better microslop</h1>
+
+<div class="container">
+
+    <h1>jaideep but better</h1>
+
+    <div class="row">
+        <div class="label" onclick="toggle('gear')">gear</div>
+        <div class="content" id="gear">
+            laptop — lenovo legion slim 5<br>
+            phone — oneplus 13r 
+          samsung galaxy j8<br>
+            setup — minimal workspace
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="label" onclick="toggle('interests')">interests</div>
+        <div class="content" id="interests">
+            programming — java, devops<br>
+            gym — strength + aesthetics<br>
+            manga — psychological, seinen
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="label" onclick="toggle('work')">current work</div>
+        <div class="content" id="work">
+            learning java<br>
+            building android productivity app<br>
+            dbms project
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggle(id) {
+        const el = document.getElementById(id);
+
+        if (el.style.display === "block") {
+            el.style.display = "none";
+        } else {
+            el.style.display = "block";
+        }
+    }
+</script>
+
 </body>
 </html>
